@@ -25,7 +25,7 @@ public class HelloAntlr4 {
 
     public static void runAntlr4() throws IOException{
         // create a CharStream that reads from standard input
-        ANTLRInputStream input = new ANTLRInputStream(new ByteArrayInputStream("{1,2,3}".getBytes()));
+        ANTLRInputStream input = new ANTLRInputStream(new ByteArrayInputStream("{1,2,数字}".getBytes()));
         // create a lexer that feeds off of input CharStream
         DemoLexer lexer = new DemoLexer(input);
         // create a buffer of tokens pulled from the lexer

@@ -21,7 +21,7 @@ public class ShortToUnicodeString extends DemoBaseListener {
     @Override
     public void enterValue(DemoParser.ValueContext ctx) {
         // Assumes no nested array initializers
-        int value = Integer.valueOf(ctx.INT().getText());
+        String value = ctx.getText();
 //        System.out.printf("\\u%04x", value);
         System.out.print(value);
     }

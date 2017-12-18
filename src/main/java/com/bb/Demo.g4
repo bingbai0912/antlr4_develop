@@ -9,8 +9,10 @@ init  : '{' value (',' value)* '}' ;  // must match at least one value
 /** A value can be either a nested array/struct or a simple integer   (INT) */
 value : init
       | INT
+      | CHINESE
       ;
 
 // parser rules start with lowercase letters, lexer rules with   uppercase
 INT :   [0-9]+ ;             // Define token INT as one or more digits
 WS  :   [ \t\r\n]+ -> skip ; // Define whitespace rule, toss it out
+CHINESE : [\u4e00-\u9fa5]+ ; // Define CHINESE charset suport
